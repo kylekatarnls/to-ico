@@ -12,7 +12,7 @@ const constants = {
 };
 
 const createHeader = n => {
-	const buf = Buffer.alloc(constants.headerSize);
+	const buf = new Buffer(constants.headerSize);
 
 	buf.writeUInt16LE(0, 0);
 	buf.writeUInt16LE(1, 2);
